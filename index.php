@@ -16,12 +16,12 @@ require_once('config.php');
     <h1>Qualidade de vida e o índice de suicídio</h1>
     <form method="get">
         <select>
-            <option value=0>Todos</option>
+            <option id='selectEstado' nome='selectEstado' value=0>Todos</option>
             <?foreach($STATUS as $chave => $valor){?>
                 <option value=<?=$chave?>><?=$valor?></option>
             <?}?>
         </select> 
-        <input type='submit' name='opcao' value='Selecionar'> 
+        <input type='submit' id='opcao' name='opcao' value='Selecionar'> 
     </form>
     <div class='grafico'>
         <canvas id="myChart"></canvas>
