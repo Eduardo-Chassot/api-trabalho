@@ -16,6 +16,8 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
+@import url();
+
 html, body{
     margin: 0;
     padding: 0;
@@ -29,6 +31,10 @@ html, body{
     height: 100%;
 }
 
+form{
+    margin-left: 20%;
+}
+
 .grafico{
     width: 70%;
     margin-left: auto;
@@ -38,7 +44,7 @@ html, body{
 
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: medium;
     margin: 30px;
 }
 

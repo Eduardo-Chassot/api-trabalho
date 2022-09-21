@@ -11,12 +11,10 @@ require_once('config.php');
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>O IDH e a taxa de suicídio</title>
 </head>
-
 <body>
     <div class='container'>
-    <h1>Titulo</h1>
+    <h1>Qualidade de vida e o índice de suicídio</h1>
     <form method="post">
-        <input type='submit' name='todos' value='Todos'>
         <select>
             <option value=0>Todos</option>
             <?foreach($STATUS as $chave => $valor){?>
@@ -28,10 +26,10 @@ require_once('config.php');
     <div class='grafico'>
         <canvas id="myChart"></canvas>
     <h2>TEXTO</h2>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="jQuery.js"></script>
+    <script src="script.js"></script>
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="jQuery.js"></script>
-<script src="script.js"></script>
 
 </html>
