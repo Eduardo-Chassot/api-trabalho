@@ -2,12 +2,9 @@
 var allLabels = [];
 var allValues = [];
 var conteudoJSON;
-$.ajax({
+$.post({
     type: 'GET',
     url: "http://localhost/api-trabalho/criarArray.php",
-    dataType: 'json',
-    contentType: 'application/json',
-    crossDomain: false,
     cache:false,
     success: function(array)
     {
@@ -53,7 +50,6 @@ const myChart = new Chart(ctx, {
 });
 
 
-
 /*const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
@@ -89,3 +85,4 @@ const myChart = new Chart(ctx, {
         }
     }
 });*/
+

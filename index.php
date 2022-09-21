@@ -14,7 +14,7 @@ require_once('config.php');
 <body>
     <div class='container'>
     <h1>Qualidade de vida e o índice de suicídio</h1>
-    <form method="post">
+    <form method="get">
         <select>
             <option value=0>Todos</option>
             <?foreach($STATUS as $chave => $valor){?>
