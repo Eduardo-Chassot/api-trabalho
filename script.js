@@ -1,33 +1,38 @@
-
-var allLabels = [];
-var allValues = [];
-var conteudoJSON;
-$.post({
-    type: 'GET',
-    url: "http://localhost/api-trabalho/criarArray.php",
-    cache:false,
-    success: function(array)
-    {
-        conteudoJSON = array;
-        for(var k in array) {
-            allLabels.push(k);
-            allValues.push(array[k]);
+function fn_function(estadoSelecionado){
+    var allLabels = [];
+    var allValues = [];
+    var conteudoJSON;
+    $.ajax({
+        type: 'GET',
+        url: "http://localhost/api-trabalho/criarArray.php",
+        dataType: 'json',
+        contentType: 'application/json',
+        crossDomain: false,
+        cache:false,
+        data: {
+            estado : estadoSelecionado
+        },
+        success: function(array)
+        {
+            conteudoJSON = array;
+            for(var k in array) {
+                allLabels.push(k);
+                allValues.push(array[k]);
+            }
+            console.log(allLabels);
+        },
+        error:function(errorThrown){
+            alert('Erro ao carregar');
+            console.log(errorThrown);
         }
-        console.log(allLabels);
-    },
-    error:function(errorThrown){
-        alert('Erro ao carregar');
-        console.log(errorThrown);
-    }
-});
-
-
+    });
+}
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: allLabels,
+         labels: allLabels,
         datasets: [{
             label: '# of Votes',
             data: allValues,
@@ -85,4 +90,3 @@ const myChart = new Chart(ctx, {
         }
     }
 });*/
-
