@@ -33,10 +33,3 @@ require_once('config.php');
 </body>
 
 </html>
-
-
-<script>
-    
-    var estado = document.getElementById('selectEstado');
-    fn_function(estado);
-</script>
