@@ -1,12 +1,33 @@
+<?php
+require_once('config.php');
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>O IDH e a taxa de suicídio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>O IDH e a taxa de suicídio</title>
 </head>
 
 <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <div class='container'>
+    <h1>Titulo</h1>
+    <form method="post">
+        <input type='submit' name='todos' value='Todos'>
+        <select>
+            <option value=0>Todos</option>
+            <?foreach($STATUS as $chave => $valor){?>
+                <option value=<?=$chave?>><?=$valor?></option>
+            <?}?>
+        </select> 
+        <input type='submit' name='opcao' value='Selecionar'> 
+    </form>
+    <div class='grafico'>
+        <canvas id="myChart"></canvas>
+    <h2>TEXTO</h2>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,4 +35,3 @@
 <script src="script.js"></script>
 
 </html>
-
