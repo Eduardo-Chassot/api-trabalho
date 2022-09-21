@@ -1,5 +1,9 @@
 <?php
-require_once('config.php');
+include_once 'config.php';
+foreach($STATUS as $chave => $dados){
+    print_r($dados);
+    echo $chave;
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +18,12 @@ require_once('config.php');
 <body>
     <div class='container'>
     <h1>Qualidade de vida e o índice de suicídio</h1>
-    <form method="get">
-        <select>
-            <option id='selectEstado' nome='selectEstado' value=0>Todos</option>
-            <?foreach($STATUS as $chave => $valor){?>
-                <option value=<?=$chave?>><?=$valor?></option>
-            <?}?>
+    <form method="GET">
+        <select id='selectEstado' nome='selectEstado'>
+            <option value='0'>Todos</option>
+            <?foreach($STATUS as $chave => $dados){ ?>
+                <option value='<?=$chave?>'><?=$valor?></option>
+            <?};?>
         </select> 
         <input type='submit' id='opcao' name='opcao' value='Selecionar'> 
     </form>
@@ -33,3 +37,6 @@ require_once('config.php');
 </body>
 
 </html>
+
+<script>
+</script>

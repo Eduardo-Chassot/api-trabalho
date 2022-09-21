@@ -1,17 +1,13 @@
-function fn_function(estadoSelecionado){
+
     var allLabels = [];
     var allValues = [];
     var conteudoJSON;
     $.ajax({
         type: 'GET',
-        url: "http://localhost/api-trabalho/criarArray.php",
+        url: "criarArray.php",
         dataType: 'json',
         contentType: 'application/json',
-        crossDomain: false,
         cache:false,
-        data: {
-            estado : estadoSelecionado
-        },
         success: function(array)
         {
             conteudoJSON = array;
@@ -26,33 +22,34 @@ function fn_function(estadoSelecionado){
             console.log(errorThrown);
         }
     });
-}
 
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-         labels: allLabels,
-        datasets: [{
-            label: '# of Votes',
-            data: allValues,
-            backgroundColor: [
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: allLabels,
+            datasets: [{
+                label: 'Suicidios por ano',
+                data: allValues,
+                backgroundColor: [
+                    'rgba(0, 0, 0)'
+                ],
+                borderColor: [
+                    'rgba(255, 0, 0)'
+                ],
+                borderWidth: 5
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
             }
         }
-    }
-});
+    });
+
 
 
 /*const ctx = document.getElementById('myChart').getContext('2d');

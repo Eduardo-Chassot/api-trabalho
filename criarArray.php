@@ -8,6 +8,7 @@ echo json_encode($arr);
 
 
 
+
 $handle = fopen("suicidio-de-jovens.csv", "r");
 
 $header = fgetcsv($handle, 1000, ";");
