@@ -1,8 +1,8 @@
-
+    var estado = document.getElementById('selectEstado');
     var allLabels = [];
     var allValues = [];
     var conteudoJSON;
-    $.ajax({
+    $.get({
         type: 'GET',
         url: "criarArray.php",
         dataType: 'json',
@@ -33,7 +33,7 @@
                 label: 'Suicidios por ano',
                 data: allValues,
                 backgroundColor: [
-                    'rgba(0, 0, 0)'
+                    'rgba(50, 0, 0)'
                 ],
                 borderColor: [
                     'rgba(255, 0, 0)'
