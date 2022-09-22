@@ -1,9 +1,9 @@
 <?php
 include_once 'config.php';
-foreach($STATUS as $chave => $dados){
+/*pforeach($STATUS as $chave => $dados){
     print_r($dados);
     echo $chave;
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -22,17 +22,26 @@ foreach($STATUS as $chave => $dados){
     <div class='container'>
     <h1>Qualidade de vida e o índice de suicídio</h1>
     <form method="GET">
+        <div class='textoform'>
+        <p>Selecionar Estado</p>
+        </div>
         <select id='selectEstado' nome='selectEstado'>
             <option value='0'>Todos</option>
             <?foreach($STATUS as $chave => $dados){ ?>
                 <option value='<?=$chave?>'><?=$valor?></option>
             <?};?>
-        </select> 
+            </select>
         <input type='submit' id='opcao' name='opcao' value='Selecionar'> 
     </form>
     <div class='grafico'>
         <canvas id="myChart"></canvas>
     <h2>TEXTO</h2>
+    </div>
+    <div class='linha'>
+    <hr size="10" width="33%" noshade color='black'>
+    </div>
+    <p>Precisa de ajuda?</p>
+    <p>Disque 188 - Centro de Valorização da Vida</p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="jQuery.js"></script>
