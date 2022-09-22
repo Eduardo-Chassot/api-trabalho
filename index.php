@@ -1,36 +1,5 @@
 <?php
 include_once 'config.php';
-$estadosDoBrasil = [
-    1 => 'AC',
-    2 => 'AL',
-    3 => 'AM',
-    4 => 'AP',
-    5 => 'BA',
-    6 => 'CE',
-    7 => 'DF',
-    8 => 'ES',
-    9 => 'GO',
-    10 => 'MA',
-    11 => 'MG',
-    12 => 'MS',
-    13 => 'MT',
-    14 => 'PA',
-    15 => 'PB',
-    16 => 'PE',
-    17 => 'PI',
-    18 => 'PR',
-    19 => 'RJ',
-    20 => 'RN',
-    21 => 'RO',
-    23 => 'RR',
-    24 => 'RS',
-    25 => 'SC',
-    26 => 'SE',
-    27 => 'TO'
-];
-foreach($estadosDoBrasil as $chave=>$value){
-    echo $value;
-}
 ?>
 
 <!DOCTYPE html>
@@ -49,17 +18,26 @@ foreach($estadosDoBrasil as $chave=>$value){
     <div class='container'>
     <h1>Qualidade de vida e o índice de suicídio</h1>
     <form method="GET">
+        <div class='textoform'>
+        <p>Selecionar Estado</p>
+        </div>
         <select id='selectEstado' nome='selectEstado'>
             <option value='0'>Todos</option>
-            <?php foreach($estadosDoBrasil as $chave => $dados){ ?>
-                <option value=<?=$chave?>><?=$dados?></option>
-            <?php } ?>
-        </select> 
+            <?foreach($STATUS as $chave => $dados){ ?>
+                <option value='<?=$chave?>'><?=$valor?></option>
+            <?};?>
+            </select>
         <input type='submit' id='opcao' name='opcao' value='Selecionar'> 
     </form>
     <div class='grafico'>
         <canvas id="myChart"></canvas>
     <h2>TEXTO</h2>
+    </div>
+    <div class='linha'>
+    <hr size="10" width="33%" noshade color='black'>
+    </div>
+    <p>Precisa de ajuda?</p>
+    <p>Disque 188 - Centro de Valorização da Vida</p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="jQuery.js"></script>

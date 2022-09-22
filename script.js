@@ -36,21 +36,25 @@
                     'rgba(50, 0, 0)'
                 ],
                 borderColor: [
-                    'rgba(255, 0, 0)'
+                    'rgba(0, 0, 0)'
                 ],
                 borderWidth: 5
             }]
         },
         options: {
+            plugins: {
+                legend: {
+                    display:true,
+                    position:'bottom'
+                }
+            },  
             scales: {
                 y: {
                     beginAtZero: true
                 }
-            }
-        }
+            },
+        },
     });
-
-
 
 /*const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
