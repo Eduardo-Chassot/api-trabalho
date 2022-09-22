@@ -1,5 +1,5 @@
 <?php
-include_once 'config.php';
+require_once 'config.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +17,17 @@ include_once 'config.php';
 <body>
     <div class='container'>
     <h1>Qualidade de vida e o índice de suicídio</h1>
-    <form method="GET">
+    <form>
         <div class='textoform'>
         <p>Selecionar Estado</p>
         </div>
         <select id='selectEstado' nome='selectEstado'>
             <option value='0'>Todos</option>
-            <?foreach($STATUS as $chave => $dados){ ?>
-                <option value='<?=$chave?>'><?=$valor?></option>
-            <?};?>
+            <?php foreach($STATUS as $chave => $dados){ ?>
+                <option value=<?=$chave?>><?=$dados?></option>
+            <?php } ?>
             </select>
-        <input type='submit' id='opcao' name='opcao' value='Selecionar'> 
+        <button id='opcao' name='opcao' placeholder="selecionar"></button>
     </form>
     <div class='grafico'>
         <canvas id="myChart"></canvas>
@@ -47,5 +47,13 @@ include_once 'config.php';
 </html>
 
 <script>
-    
+    (function(){
+
+        var lido = document.getElementById('opcao');
+        lido.addEventListener("click", function(event) {
+            console.log('clickado');
+            AJAX();
+        })
+
+    })
 </script>

@@ -6,7 +6,8 @@ echo json_encode($arr);
 
 }
 
-
+$estado = $_GET;
+print_r($estado);
 
 
 $handle = fopen("suicidio-de-jovens.csv", "r");
