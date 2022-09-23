@@ -30,35 +30,25 @@ $(function(){
                     console.log(errorThrown);
                 }
             });
+
+            console.log()
+
+            const data = {
+                labels: allLabels,
+                datasets: [{
+                  label: 'My First Dataset',
+                  data: allValues,
+                  fill: false,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0.1
+                }]
+              };
             
             const ctx = document.getElementById('myChart').getContext('2d');
             const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: allLabels,
-                    datasets: [{
-                        label: 'Suicidios por ano',
-                        data: allValues,
-                        borderColor: [
-                            'rgba(0, 0, 0)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display:true,
-                            position:'bottom'
-                        }
-                    },  
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    },
-                },
-         });
+                type: 'line',
+                data : data,
+            });
         
     })
 });
