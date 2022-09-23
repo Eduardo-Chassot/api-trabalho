@@ -17,18 +17,16 @@ require_once 'config.php';
 <body>
     <div class='container'>
     <h1>Qualidade de vida e o índice de suicídio</h1>
-    <form>
-        <div class='textoform'>
-        <p>Selecionar Estado</p>
-        </div>
-        <select id='selectEstado' nome='selectEstado'>
-            <option value='0'>Todos</option>
-            <?php foreach($STATUS as $chave => $dados){ ?>
-                <option value=<?=$chave?>><?=$dados?></option>
-            <?php } ?>
-            </select>
-        <button id='opcao' name='opcao' placeholder="selecionar"></button>
-    </form>
+    <div class='textoform'>
+    <p>Selecionar Estado</p>
+    </div>
+    <select id='selectEstado' nome='selectEstado'>
+        <option value='0'>Todos</option>
+        <?php foreach($STATUS as $chave => $dados){ ?>
+            <option value=<?=$chave?>><?=$dados?></option>
+        <?php } ?>
+    </select>
+    <button id='opcao' name='opcao' placeholder="selecionar">Selecionar</button>
     <div class='grafico'>
         <canvas id="myChart"></canvas>
     <h2>TEXTO</h2>
@@ -45,15 +43,3 @@ require_once 'config.php';
 </body>
 
 </html>
-
-<script>
-    (function(){
-
-        var lido = document.getElementById('opcao');
-        lido.addEventListener("click", function(event) {
-            console.log('clickado');
-            AJAX();
-        })
-
-    })
-</script>
