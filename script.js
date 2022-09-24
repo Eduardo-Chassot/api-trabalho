@@ -56,8 +56,8 @@ $(function(){
                         y: {
                             beginAtZero: true
                         }
-                    },
-                },
+                    }
+                }
          });
         
     })

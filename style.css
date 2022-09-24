@@ -29,10 +29,8 @@ html, body{
     height: 100%;
 }
 
-form{
-    margin-left: 30%;
-    margin-bottom: 2%;
-    margin-top: 3%;
+.form{
+    margin-left: 48.5%;
 }
 
 .grafico{
@@ -47,14 +45,14 @@ h1{
     margin: 30px;
     font-family: 'Roboto Mono', monospace;
     text-shadow: 2px 2px 2px #aaa;
+    margin-bottom: 70px;
 }
 
-h2{
+.texto{
     text-align: center;
     margin: 15px;
-    font-size: x-large;
     font-family: 'Roboto Mono', monospace;
-    margin:30px;
+    margin-bottom: 50px;
 }
 
 input, select{
@@ -71,7 +69,7 @@ p{
 }
 
 .textoform{
-    margin-right: 50%;
+    align-items: center;
 }
 
 .linha{
