@@ -1,6 +1,6 @@
-# api-trabalho
-Trabalho sobre API
+# Qualidade de vida e o índice de suicídio
 
-O arquivo lido vai ser um CSV
-Transformado em JSON pelo PHP e enviado ao JS 
-Será usado o JS charts para criar as tabelas
+Qualidade de vida e o índice de suicídio
+Eduardo Felipe Back Chassot e Gustavo Henrique Nienov
+Fonte dos dados: https://www.ipea.gov.br/atlasviolencia/dados-series/173
+
