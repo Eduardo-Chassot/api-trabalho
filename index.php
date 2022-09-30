@@ -32,7 +32,7 @@ require_once 'config.php';
         </div>
         <div class='form'>
             <select id='selectEstado' nome='selectEstado'>
-                <option value='0'>Todos</option>
+                <option value='0'>--</option>
                 <?php foreach($STATUS as $chave => $dados){ ?>
                 <option value=<?=$chave?>><?=$dados?></option>
                 <?php } ?>
