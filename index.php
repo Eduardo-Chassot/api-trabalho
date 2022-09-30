@@ -18,7 +18,7 @@ require_once 'config.php';
 
 <body>
     <div class='container'>
-        <h1>Qualidade de vida e o índice de suicídio</h1>
+        <h1>Qualidade de vida e suicídio</h1>
         <div class="texto">
             O objetivo deste site é obter os números de suicídios registrados nos estados brasileiros e compara-los, por meio de gráficos, ao IDH de cada unidade federativa, 
             identificando se a quantidade de suicídios está diretamente ligada à qualidade de vida.
