@@ -23,7 +23,7 @@ require_once 'config.php';
             O objetivo deste site é obter os números de suicídios registrados nos estados brasileiros e compara-los, por meio de gráficos, ao IDH de cada unidade federativa, 
             identificando se a quantidade de suicídios está diretamente ligada à qualidade de vida.
         </div>
-        <div class='texto'>Baixamos o <a href="https://www.ipea.gov.br/atlasviolencia/dados-series/173">arquivo CSV</a> do Atlas da Violência no site do Instituto de Pesquisa 
+        <div class='texto'> Procedimentos metodológicos: Baixamos o <a href="https://www.ipea.gov.br/atlasviolencia/dados-series/173">arquivo CSV</a> do Atlas da Violência no site do Instituto de Pesquisa 
         Econômica Avançada (IPEA), utilizamos o PHP para manipular o CSV e criar um arquivo JSON, com o JS foi feito o POST para o PHP utilizando Ajax, em seguida o PHP retorna o 
         resultado em JSON que é utilizado para criar o gráfico por meio do Charts.js. 
         </div>
