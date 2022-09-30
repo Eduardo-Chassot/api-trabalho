@@ -19,6 +19,14 @@ require_once 'config.php';
 <body>
     <div class='container'>
         <h1>Qualidade de vida e o índice de suicídio</h1>
+        <div class="texto">
+            O objetivo deste site é obter os números de suicídios registrados nos estados brasileiros e compara-los, por meio de gráficos, ao IDH de cada unidade federativa, 
+            identificando se a quantidade de suicídios está diretamente ligada à qualidade de vida.
+        </div>
+        <div class='texto'>Baixamos o <a href="https://www.ipea.gov.br/atlasviolencia/dados-series/173">arquivo CSV</a> do Atlas da Violência no site do Instituto de Pesquisa 
+        Econômica Avançada (IPEA), utilizamos o PHP para manipular o CSV e criar um arquivo JSON, com o JS foi feito o POST para o PHP utilizando Ajax, em seguida o PHP retorna o 
+        resultado em JSON que é utilizado para criar o gráfico por meio do Charts.js. 
+        </div>
         <div class='textoform'>
             <p>Selecionar estado: </p>
         </div>
@@ -32,21 +40,14 @@ require_once 'config.php';
         </div>
         <div class='grafico'>
             <canvas id="myChart"></canvas>
+            <canvas id="ChartIDH"></canvas>
+            <a>fonte: </a><a href=https://www.preparaenem.com/geografia/oidhdosestadosbrasileiros.htm">https://brasilescola.uol.com.br/brasil/o-idh-no-brasil.html</a>
         </div>
         <div class="texto">
-             Muitos dos jovens de hoje sofrem ou sofreram de depressão, não à toa é considerada o mal do século, em decorrência a está doença, ocorrem diversos casos de suicídio
-             ao redor de todo o país. Ver um jovem tirar sua própria vida nos faz pensar as causas de sua ação e se o problema é individual ou de toda a sociedade. 
-             Por meio de um sistema feito por nós, com a ajuda dos dados públicos disponibilizados pelo Atlas da Violência do Instituto de Pesquisa Econômica Avançada (IPEA), 
-             iremos contabilizar, comparar e estudar os números registrados por cada estado, verificando se a quantidade de suicídios está relacionada com a qualidade de vida de 
-             acordo com o IDH de cada estado. Utilizamos das informações retiradas da IPEA para montar um gráfico de cada estado e compará-los com o índice de desenvolvimento humano 
-             da região, com isso podemos identificar se a qualidade de vida realmente interfere na quantidade de suicídios. Após a análise chegamos à conclusão que locais com IDH 
-             consideravelmente baixo possuem menos casos de suicídios comparados a estados com IDH elevado, como por exemplo, o Distrito Federal, dono do maior IDH do Brasil e com 
-             população de aproximadamente 3 Milhões de pessoas, possui praticamente a mesma quantidade de casos do Piauí, que tem o 3º pior IDH Brasileiro e a população, também em 
-             torno dos 3 Milhões. E em outros casos é justamente o contrário. Portanto, descobrimos que a depressão não escolhe alvos, todos podem ser afetados, indiferente de renda 
-             ou localidade.
-        </div>
-        <div class='grafico'>
-            <canvas id="ChartIDH"></canvas>
+            Após a análise dos dados identificamos que locais com maior qualidade de vida tem leve aumento na quantidade de suicídio comparado a locais com menor qualidade de vida, 
+            como o exemplo de Brasília e Tocantins, com isso, há duas possíbilidades: <br>A população "pobre" tem menos tempo livre, logo menos tempo para desenvolver depressão mais
+            profunda pela cabeça estar muito ocupada, além da família precisar do dinheiro;<br>A população "rica" tem maior acesso a policiamento e é menos julgada socialmente, 
+            portanto há mais casos registrados.
         </div>
         <div class='linha'>
             <hr size="10" width="33%" noshade color='black'>
